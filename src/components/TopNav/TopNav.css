@@ -1,0 +1,14 @@
+.topnav{
+    max-height: 8vh;
+    background-color: #B49167;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.topnav a{
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}

@@ -1,0 +1,114 @@
+.footer {
+  width: 100%;
+  max-width: 100%;
+  /* border: 2px solid red; */
+  background-color: #191919;
+  bottom: 0;
+  padding: 40px 0;
+  color: white;
+  overflow: hidden;
+}
+
+.footerLogo {
+  width: 100%;
+  /* height: 20%; */
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+}
+
+#footerLogo {
+  width: 150px;
+}
+
+.footerContent {
+  height: 70%;
+  padding: 40px;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.quickLinks {
+  padding: 20px;
+  /* border: 2px solid red; */
+  text-align: center;
+}
+
+.quickLinks p {
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: josefin sans;
+  padding-bottom: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  /* border: 2px solid red; */
+  text-align: center;
+}
+
+.quickLinks ul {
+  list-style-type: none;
+}
+
+.quickLinks li {
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.quickLinks li:hover {
+  /* font-size: 1.20rem; */
+  color: #08e1ae;
+}
+
+.adcontactbtns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.adcontactbtns button {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.cwdev {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
+.copyrights,
+.aboutDev {
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .footerLogo {
+    height: 40%;
+  }
+
+  #footerLogo {
+    width: 70%;
+  }
+
+  .footerContent {
+    height: 60%;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .cwdev {
+    flex-direction: column;
+  }
+
+  .copyrights,
+  .aboutDev {
+    padding: 8px;
+  }
+}

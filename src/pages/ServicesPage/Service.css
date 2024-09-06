@@ -1,0 +1,32 @@
+
+.services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicesAdded{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.servicePageText{
+    padding: 20px;
+}
+
+.wtaText{
+    text-align: center;
+    padding: 20px 30px;
+}
+
+
+
+@media screen and (max-width: 650px) {
+
+    .servicePageText{
+        text-align: center;
+    }
+}

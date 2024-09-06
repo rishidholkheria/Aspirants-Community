@@ -1,0 +1,33 @@
+nav {
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 100px;
+  gap: 40px;
+  z-index: 99;
+  position: fixed;
+  color: white;
+}
+
+nav a img {
+  width: 70px;
+  height: 70px;
+  margin-top: 5px;
+}
+
+nav h4 {
+  font-family: "Lexend Deca", Times, serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: ease 0.4s;
+  padding: 3px 5px;
+  border-radius: 4px;
+}
+
+nav h4:hover {
+  background-color: orangered;
+}

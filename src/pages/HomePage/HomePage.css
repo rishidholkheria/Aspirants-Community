@@ -1,0 +1,583 @@
+.homePage {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.landingPage {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  padding: 0px 80px;
+  /* border: 2px solid red; */
+}
+
+.landingDesc {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.landingDescWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+
+.upscTag span {
+  color: blue;
+  font-weight: 800;
+}
+
+.landingLoc {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.landingDescription {
+  font-size: 1.1rem;
+  color: rgba(32, 32, 32, 0.938);
+}
+
+.landingContactWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  /* border: 2px solid red; */
+}
+
+.contactBtnTag {
+  width: 20%;
+  background-color: rgba(0, 0, 255, 0.79);
+  color: white;
+  padding: 8px 15px;
+  margin-top: 30px;
+  margin-right: 20px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.smWrapper {
+  display: flex;
+  padding: 30px 0;
+  font-size: 1.1rem;
+  color: rgba(32, 32, 32, 0.884);
+}
+
+.smTag_ic {
+  padding: 0 10px;
+}
+
+.landingCarousel {
+  width: 55%;
+}
+
+.landingCarouselImg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---Service Page ---- */
+
+.servicePage {
+  width: 100%;
+  min-height: fit-content;
+  height: auto;
+  display: flex;
+  background-color: #f8f9fa;
+}
+
+.servicesHead {
+  /* width: 10%; */
+  flex: 1;
+  max-width: 83px;
+  min-height: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  background-color: #32de7a;
+}
+
+#servicesHead {
+  min-width: 100%;
+  /* height: 100%; */
+  transform: rotate(270deg);
+  max-lines: 1;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  font-family: josefin sans;
+  /* border: 2px solid red; */
+}
+
+.servicesWrapper {
+  /* width: 90%; */
+  flex: 9;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  position: static;
+}
+
+.singleService {
+  /* border: 2px solid red; */
+  /* width: 30%; */
+  flex: 1;
+  height: auto;
+  max-height: fit-content;
+  min-width: 195px;
+  padding: 15px;
+  margin: 20px;
+  /* display: flex; */
+  flex-direction: column;
+  /* justify-content: center; */
+  background-color: white;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.5s ease;
+}
+
+.singleService:hover {
+  /* min-width: 200px; */
+  transform: scale(1.05);
+  /* transform: scalex(1.1); */
+  cursor: pointer;
+  transition: 0.5s ease;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+
+.serviceIcon {
+  padding: 12px;
+  border-radius: 80px;
+  margin: 7px;
+  text-align: center;
+}
+
+.singleService p {
+  text-align: center;
+  padding: 5px;
+}
+
+.fa-home,
+.fa-star,
+.fa-book-reader,
+.fa-utensils {
+  color: #32de7a;
+  padding: 4px;
+}
+
+/* -----Locations Description----  */
+
+.aboutLocations {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutLocSingle {
+  display: flex;
+  width: 100%;
+  /* border: 2px solid red; */
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.aboutLocationDesc {
+  width: 60%;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: flex-start;
+}
+
+.aboutLocHead {
+  text-align: start;
+  padding: 10px 0;
+  font-family: josefin sans;
+  font-size: 2rem;
+}
+
+.aboutLocDesc {
+  text-align: start;
+}
+
+.pageLink {
+  background-color: #3cc43c;
+  background-image: linear-gradient(315deg, #32de7a 0%, #10b684dc 44%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.locImage {
+  width: 40%;
+  /* border: 2px solid green; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#locImage {
+  width: 100%;
+  min-height: 400px;
+}
+
+.locMap {
+  background-color: rgb(3%, 88%, 68%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin: 20px 0;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Why choose Us  */
+
+.whyChooseUS {
+  width: 100%;
+  /* min-height: 400px; */
+  margin-top: 20px;
+  padding: 40px 0;
+  background-color: #32de7a;
+  display: flex;
+  align-items: center;
+}
+
+.wcuWrapper {
+  width: 50%;
+  text-align: start;
+  padding: 30px;
+}
+
+.whyChooseUSHeading {
+  font-size: 2rem;
+  font-family: josefin sans;
+  font-weight: 500;
+  color: white;
+}
+
+.whyChooseUSDesc {
+  padding: 20px 0;
+  font-size: 1.1rem;
+}
+
+.servicePageLinks {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.servicePageSingleLink {
+  width: 70%;
+  min-height: 24%;
+  padding: 20px;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c1f5d7;
+  /* opacity: 0.7; */
+  font-size: 1.4rem;
+  font-family: josefin sans;
+  color: #16b87a;
+  font-weight: 600;
+  border-left: 7px solid #16b87a;
+  margin-bottom: 4px;
+}
+
+.servicePageSingleLink:hover {
+  transition: 0.7s ease;
+  width: 85%;
+  cursor: pointer;
+}
+
+/* Contact US */
+.contUs {
+  padding: 15px 0;
+}
+
+/* --------------MOBILE---------------- */
+
+@media screen and (max-width: 1100px) {
+  /* ------Landing Page------- */
+
+  .landingDesc {
+    /* flex: 1; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    overflow: hidden;
+  }
+
+  .landingDescWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 30px 0; */
+    /* border: 2px solid red; */
+  }
+
+  .btnTag {
+    width: 25%;
+  }
+
+  .landingCarousel {
+    display: none;
+  }
+
+  /* ----About Locations----- */
+
+  .aboutLocSingle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 2px solid red; */
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .aboutLocationDesc {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .locImage {
+    width: 100%;
+    /* border: 2px solid green; */
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  div.aboutLocations > div:nth-of-type(even) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .landingPage{
+    padding: 10px 20px;
+  } 
+    
+  .landingDescWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .upscTag {
+    font-weight: 600;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .upscTag span {
+    color: blue;
+    font-weight: 800;
+  }
+
+  .btnTag {
+    width: 80%;
+    margin: 8px;
+  }
+
+  .landingContactWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contactBtnTag {
+    width: 50%;
+    margin: 10px;
+  }
+
+  .whyChooseUS {
+    width: 100%;
+    /* min-height: 400px; */
+    margin-top: 20px;
+    /* padding: 40px; */
+    background-color: #32de7a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .wcuWrapper {
+    width: 100%;
+    text-align: start;
+    padding: 30px;
+  }
+
+  .whyChooseUSDesc {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 1.1rem;
+  }
+
+  .servicePageLinks {
+    width: 100%;
+  }
+
+  .servicePageSingleLink {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .servicePageSingleLink:hover {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .locImage {
+    /* border: 2px solid red; */
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /* .landingDescWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .upscTag {
+    font-weight: 600;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .upscTag span {
+    color: blue;
+    font-weight: 800;
+  } */
+
+  .btnTag {
+    width: 80%;
+    margin: 8px;
+  }
+
+  .landingContactWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contactBtnTag {
+    width: 50%;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .landingPage {
+    width: 100%;
+    min-height: fit-content;
+    padding: 5px 10px;
+    padding-top: 20px;
+  }
+
+  .welcomeTag {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .landingDescription {
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: rgba(32, 32, 32, 0.884);
+  }
+
+  /* Service Page */
+
+  .servicePage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .servicesHead {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+    /* border: 2px solid red; */
+  }
+
+  #servicesHead {
+    width: 100%;
+    /* height: 100%; */
+    transform: none;
+    max-lines: 1;
+    font-size: 1.5rem;
+    color: white;
+    font-family: josefin sans;
+    /* border: 2px solid red; */
+  }
+
+  .aboutLocationDesc {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aboutLocDesc {
+    text-align: center;
+  }
+
+  .whyChooseUSHeading {
+    text-align: center;
+  }
+
+  .whyChooseUSDesc {
+    text-align: center;
+  }
+}
