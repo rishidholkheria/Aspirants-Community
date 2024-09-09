@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Footer.css"
-import ORN2 from "../../assets/ORN2.jpeg"
+import Logo from "../../assets/logo.png"
 
 const Footer = () => {
     return (
@@ -28,7 +28,7 @@ const Footer = () => {
                 <div className="quickLinks">
                     <p>Advertise your service</p>
                     <div className="adcontactbtns">
-                        <a href="tel: 9871915608">
+                        <a href="">
                             <button>Call Now</button>
                         </a>
                         <a href="mailto: orn.connect@gmail.com">
@@ -41,7 +41,7 @@ const Footer = () => {
 
 
             <div className="footerLogo">
-                <img id="footerLogo" src={ORN2} alt="logo" />
+                <img id="footerLogo" src={Logo} alt="logo" />
             </div>
 
             <div className="cwdev">

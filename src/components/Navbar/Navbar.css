@@ -1,8 +1,7 @@
-nav {
+/* nav {
   position: absolute;
   height: 70px;
   width: 100%;
-  /* background-color: red; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -11,6 +10,16 @@ nav {
   z-index: 99;
   position: fixed;
   color: white;
+}
+
+.logoIcon{
+  margin: auto;
+  border: 3px solid red;
+}
+
+.menuBtn, .cancelMenuBtn{
+  width: 25px;
+  height: 25px;
 }
 
 nav a img {
@@ -28,6 +37,108 @@ nav h4 {
   border-radius: 4px;
 }
 
+nav h4 a{
+  text-decoration: none;
+  color: white;
+}
+
 nav h4:hover {
   background-color: orangered;
+}
+
+.linksContainer{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} */
+
+nav{
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 100px;
+  gap: 40px;
+  z-index: 99;
+  position: fixed;
+  color: white;
+}
+.links-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+nav a{
+  padding: 2px 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 15px;
+  margin: 0 5px;
+  transition: 0.2s ease-in;
+  /* border: 2px solid red; */
+}
+nav a:hover{
+  background-color: #32de7a;
+}
+nav .home-link{
+  margin-right: auto;
+}
+nav svg{
+  fill: white;
+}
+#sidebar-active{
+  display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+  display: none;
+  position: absolute;
+  right: 10px;
+}
+
+@media(max-width: 550px){
+  .links-container{
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+
+    background-color: black;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+  }
+  nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+  .open-sidebar-button, .close-sidebar-button{
+    padding: 20px;
+    display: block;
+  }
+  #sidebar-active:checked ~ .links-container{
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
 }
