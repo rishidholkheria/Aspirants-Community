@@ -11,14 +11,26 @@
   overflow-x: hidden;
 }
 
+
+#pageSubhead {
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  background-color: #3cc43c;
+  background-image: linear-gradient(315deg, #32de7a 0%, #10b684dc 44%);
+  color: white;
+  margin: 10px;
+  border-radius: 4px;
+}
+
 .rooms {
   background-color: black;
   max-width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  /* border: 2px solid red */
+  padding: 10px;
+  /* border: 2px solid red; */
 }
-

@@ -4,6 +4,7 @@ import RoomLayout from "../../components/RoomLayout/RoomLayout";
 import { BenefitsOfLocation } from "../BenefitsOfLocation";
 import { database, onValue, ref } from "../../firebaseConfig";
 import { locationNameFromType } from "../../utlis/pgMapper";
+import { PageHeader } from "../../components/PageHeader/PageHeader";
 
 const Pg = ({ type }) => {
   const [rooms, setRooms] = useState([]);
@@ -24,13 +25,15 @@ const Pg = ({ type }) => {
   console.log(rooms);
   return (
     <div className="pgkb">
-      <p className="pageHead">PG in {locationNameFromType(type)}</p>
-
+      <PageHeader title={type} type="pg"/>
 
       <div className="rooms">
         {rooms.map((pg, index) => {
           return <RoomLayout key={index} data={pg} />;
-        })}
+        })}  
+        {rooms.map((pg, index) => {
+          return <RoomLayout key={index} data={pg} />;
+        })}  
       </div>
 
       <BenefitsOfLocation />
