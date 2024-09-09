@@ -88,7 +88,6 @@ export const Home = () => {
         <h4>Contact Us</h4>
       </nav> */}
 
-      <div className="cursor"></div>
       <div className="cursorBlur"></div>
 
       <video autoPlay loop muted>
