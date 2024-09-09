@@ -60,34 +60,6 @@ export const Home = () => {
 
   return (
     <div className="home">
-      {/* <nav ref={ref1}>
-        <a href="#">
-          <img src={logo} alt="LOGO" />
-        </a>
-        <h4>Home</h4>
-
-        <div className="pgContainer">
-          <h4 className="pgList">PGs/Apartments</h4>
-          <ul className="pgLocList">
-            <li>
-              <a href="/pg-in-old-rajinder-nagar">Old Rajinder Nagar</a>
-            </li>
-            <li>
-              <a href="/pg-in-karol-bagh">Karol Bagh</a>
-            </li>
-            <li>
-              <a href="/pg-in-patel-nagar#">Patel Nagar</a>
-            </li>
-            <li>
-              <a href="#">Mukherji Nagar</a>
-            </li>
-          </ul>
-        </div>
-
-        <h4>Services</h4>
-        <h4>Contact Us</h4>
-      </nav> */}
-
       <div className="cursorBlur"></div>
 
       <video autoPlay loop muted>
