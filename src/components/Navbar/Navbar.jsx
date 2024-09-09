@@ -2,8 +2,6 @@ import logo from "../../assets/logo.png";
 import "./Navbar.css";
 import React from "react";
 import gsap from "gsap";
-import cancel_icon from "../../assets/cancel_icon.svg";
-import menu_icon from "../../assets/menu_icon.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
@@ -50,6 +48,8 @@ const Navbar = () => {
 
   return (
     <nav>
+      <img className="logoIcon" src={logo} alt="LOGO"/>
+      
       <input type="checkbox" id="sidebar-active" />
       <label for="sidebar-active" class="open-sidebar-button">
         <svg
@@ -62,6 +62,7 @@ const Navbar = () => {
         </svg>
       </label>
       <label id="overlay" for="sidebar-active"></label>
+
       <div class="links-container">
         <label for="sidebar-active" class="close-sidebar-button">
           <svg
@@ -73,12 +74,12 @@ const Navbar = () => {
             <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
           </svg>
         </label>
-        <a class="/" href="index.html">
+        <a class="menu_item" href="/">
           Home
         </a>
-        {/* <a href="/pg-in-old-rajinder-nagar">PGs/Apartments</a> */}
+
         <div className="pgContainer">
-          <a>PGs/Apartments</a>
+          <a class="menu_item">PGs/Apartments</a>
           <ul className="pgLocList">
             <li>
               <a href="/pg-in-old-rajinder-nagar">Old Rajinder Nagar</a>
@@ -94,8 +95,21 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a href="/tiffin-services">Services</a>
-        <a href="">Contact Us</a>
+        <div className="pgContainer">
+          <a class="menu_item">Services</a>
+          <ul className="pgLocList">
+            <li>
+              <a href="/tiffin-service">Tiffin/Mess</a>
+            </li>
+            <li>
+              <a href="/pg-in-karol-bagh">Free Study Material</a>
+            </li>
+            <li>
+              <a href="/pg-in-patel-nagar">Libraries nearby</a>
+            </li>
+          </ul>
+        </div>
+        <a class="menu_item" href="">Contact Us</a>
       </div>
     </nav>
   );

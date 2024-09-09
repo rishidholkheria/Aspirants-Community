@@ -4,9 +4,11 @@ import "./Service.css";
 import { database, ref, onValue } from "../../firebaseConfig";
 import ServiceLayout from "../../components/ServiceLayout/ServiceLayout";
 import { PageHeader } from "../../components/PageHeader/PageHeader";
+import Loader from "../../components/Loader/Loader";
 
 const Service = (props) => {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const dataRef = ref(database, props.serviceType);
@@ -15,6 +17,7 @@ const Service = (props) => {
       const data = snapshot.val();
       console.log(data);
       setPosts(data);
+      setLoading(false);
     });
 
     return () => unsubscribe();
@@ -25,9 +28,15 @@ const Service = (props) => {
       <PageHeader title={props.serviceTitle} type="service" />
 
       <div className="servicesAdded">
-        {posts.map((service, index) => {
-          return <ServiceLayout key={index} data={service} />;
-        })}
+        {loading ? (
+          <div className="showLoader">
+            <Loader/>
+          </div>
+        ) : (
+          posts.map((service, index) => {
+            return <ServiceLayout key={index} data={service} />;
+          })
+        )}
       </div>
     </div>
   );

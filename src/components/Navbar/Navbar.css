@@ -10,16 +10,28 @@ nav{
   z-index: 99;
   position: fixed;
   color: white;
+  /* border: 2px solid red; */
 }
+
+.logoIcon{
+  position: absolute;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  /* border: 2px solid greenyellow; */
+  align-items: center;
+}
+
 .links-container{
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* border: 2px solid red; */
+  margin-left: 40px;
+  /* border: 2px solid rgb(0, 4, 128); */
 }
-nav a{
+.menu_item{
   padding: 2px 20px;
   display: flex;
   align-items: center;
@@ -30,7 +42,7 @@ nav a{
   transition: 0.2s ease-in;
   /* border: 2px solid red; */
 }
-nav a:hover{
+.menu_item:hover{
   background-color: #32de7a;
 }
 nav .home-link{
@@ -48,7 +60,61 @@ nav svg{
   right: 10px;
 }
 
-@media(max-width: 550px){
+
+.pgContainer {
+  position: relative; /* Ensures the dropdown is positioned relative to this container */
+  display: inline-block; /* Ensures the dropdown appears directly below the heading */
+  cursor: pointer;
+}
+
+.pgList:hover {
+  cursor: pointer; /* Optional: Adds a pointer cursor to indicate it's interactive */
+}
+
+.pgLocList {
+  background: #323232;
+  height: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  padding-top: 5px;
+  margin-top: 5px;
+  border-radius: 2px;
+  top: 100%; 
+  width: 200px;
+  overflow: hidden;
+  z-index: 1; 
+}
+
+.pgLocList li {
+  border-radius: 2px;
+  padding: 4px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pgLocList li:visited {
+  color: white;
+}
+
+.pgLocList li:hover {
+  color: white;
+  background: black;
+}
+
+.pgLocList li a {
+  color: white;
+}
+
+.pgContainer:hover .pgLocList {
+  height: auto;
+  opacity: 1;
+}
+
+
+@media(max-width: 620px){
   .links-container{
     flex-direction: column;
     align-items: flex-start;
@@ -63,12 +129,17 @@ nav svg{
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
     transition: 0.75s ease-out;
   }
-  nav a{
+  .menu_item{
     box-sizing: border-box;
     height: auto;
     width: 100%;
     padding: 20px 30px;
+    /* border: 2px solid red; */
     justify-content: flex-start;
+  }
+  .menu_item:hover{
+    background-color: transparent;
+    outline: none;
   }
   .open-sidebar-button, .close-sidebar-button{
     padding: 20px;

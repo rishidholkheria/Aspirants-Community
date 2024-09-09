@@ -42,8 +42,8 @@ const Footer = () => {
       </div>
 
       <div className="cwdev">
-        <p className="copyrights">© Copyrights - oldrajindernagar.com</p>
-        <p className="aboutDev"> - Developed by Team Cipherror</p>
+        <p className="copyrights">© Copyrights - oldrajindernagar.com </p>
+        <p className="aboutDev"> - Admin</p>
       </div>
     </div>
   );
