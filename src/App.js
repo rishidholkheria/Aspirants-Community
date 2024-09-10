@@ -21,7 +21,7 @@ function App() {
             />
             <Route path="/pg-in-karol-bagh" element={<Pg type="kb" />} />
             <Route path="/pg-in-patel-nagar" element={<Pg type="pn" />} />
-            <Route path="/" element={<Home></Home>} />
+            <Route path="/" element={<Home/>} />
             <Route
               path="/coaching-centres"
               element={

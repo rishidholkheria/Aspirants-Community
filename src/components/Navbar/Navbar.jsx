@@ -49,7 +49,7 @@ const Navbar = () => {
   return (
     <nav>
       <img className="logoIcon" src={logo} alt="LOGO"/>
-      
+
       <input type="checkbox" id="sidebar-active" />
       <label for="sidebar-active" class="open-sidebar-button">
         <svg
@@ -99,13 +99,13 @@ const Navbar = () => {
           <a class="menu_item">Services</a>
           <ul className="pgLocList">
             <li>
-              <a href="/tiffin-service">Tiffin/Mess</a>
+              <a href="/tiffin-services">Tiffin/Mess</a>
             </li>
             <li>
-              <a href="/pg-in-karol-bagh">Free Study Material</a>
+              <a href="/upsc-study-material">Free Study Material</a>
             </li>
             <li>
-              <a href="/pg-in-patel-nagar">Libraries nearby</a>
+              <a href="/library">Libraries nearby</a>
             </li>
           </ul>
         </div>

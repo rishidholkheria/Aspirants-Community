@@ -11,11 +11,11 @@ const Service = (props) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const dataRef = ref(database, props.serviceType);
-    console.log(props.serviceType);
+    const dataRef = ref(database, props.serviceType); //(database, tableName)
+    // console.log(props.serviceType);
     const unsubscribe = onValue(dataRef, (snapshot) => {
       const data = snapshot.val();
-      console.log(data);
+      // console.log(data);
       setPosts(data);
       setLoading(false);
     });
@@ -30,7 +30,7 @@ const Service = (props) => {
       <div className="servicesAdded">
         {loading ? (
           <div className="showLoader">
-            <Loader/>
+            <Loader />
           </div>
         ) : (
           posts.map((service, index) => {

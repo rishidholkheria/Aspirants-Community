@@ -4,10 +4,12 @@ import pgCard from "../../assets/rentCard.jpg";
 import smCard from "../../assets/studyMaterialCard.jpg";
 import libCard from "../../assets/libCard.jpg";
 import foodCard from "../../assets/foodCard.jpg";
-import logo from "../../assets/logo.png";
 import "./Home.css";
 import tirangaVideo from "../../assets/tirangaVideo.mp4";
-import { useEffect, useReducer, useRef } from "react";
+import {useEffect, useRef, useState } from "react";
+import { database, onValue, ref } from "../../firebaseConfig";
+import ServiceLayout from "../../components/ServiceLayout/ServiceLayout";
+import Loader from "../../components/Loader/Loader";
 gsap.registerPlugin(ScrollTrigger);
 
 export const Home = () => {
@@ -15,6 +17,22 @@ export const Home = () => {
   const ref2 = useRef();
   const cardsRef = useRef();
   const singleCardRef = useRef();
+
+  const [loading, setLoading] = useState(true);
+  const [servData, setServData] = useState([]);
+  const [serviceType, setServiceType] = useState("pg");
+
+  useEffect(() => {
+    const dataRef = ref(database, serviceType);
+    const unsubscribe = onValue(dataRef, (snapshot) => {
+      // console.log("TIFFINS_VAL", snapshot.val());
+      const data = snapshot.val();
+      setServData(data.slice(0, 4));
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, [serviceType]);
 
   useEffect(() => {
     const el1 = ref1.current;
@@ -121,6 +139,31 @@ export const Home = () => {
               <h2>Mukherji Nagar</h2>
             </div>
           </div>
+        </div>
+
+        <div className="serviceTypeBtns">
+          <button className="typeBtn" onClick={() => setServiceType("pg")}>
+            PGs
+          </button>
+          <button
+            className="typeBtn"
+            onClick={() => setServiceType("tiffin_service")}
+          >
+            Tiffins
+          </button>
+          <button className="typeBtn" onClick={() => setServiceType("library")}>
+            Libraries
+          </button>
+        </div>
+
+        <div className="showSomeServices">
+          {loading ? (
+            <Loader />
+          ) : (
+            servData?.map((data, dataKey) => {
+              return <ServiceLayout key={dataKey} data={data} />;
+            })
+          )}
         </div>
 
         <div className="aboutUS">
