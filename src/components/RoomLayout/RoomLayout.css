@@ -7,7 +7,7 @@
   /* border: 2px solid red; */
   width: 25%;
   min-width: 300px;
-  min-height: 350px;
+  height: 500px;
   margin: 15px 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -55,6 +55,12 @@
   padding: 3px 10px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.641);
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .singleServ button {

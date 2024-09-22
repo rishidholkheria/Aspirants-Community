@@ -1,15 +1,17 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import pgCard from "../../assets/rentCard.jpg";
+import commImg from "../../assets/communityImg.svg";
+import pgCard2 from "../../assets/rentCard.webp";
 import smCard from "../../assets/studyMaterialCard.jpg";
 import libCard from "../../assets/libCard.jpg";
 import foodCard from "../../assets/foodCard.jpg";
 import "./Home.css";
 import tirangaVideo from "../../assets/tirangaVideo.mp4";
 import {useEffect, useRef, useState } from "react";
-import { database, onValue, ref } from "../../firebaseConfig";
 import ServiceLayout from "../../components/ServiceLayout/ServiceLayout";
 import Loader from "../../components/Loader/Loader";
+import useFirebaseDb from "../../CustomHooks/useFirebaseDb";
+import SwiperComponent from "../../components/Swiper";
 gsap.registerPlugin(ScrollTrigger);
 
 export const Home = () => {
@@ -18,21 +20,10 @@ export const Home = () => {
   const cardsRef = useRef();
   const singleCardRef = useRef();
 
-  const [loading, setLoading] = useState(true);
-  const [servData, setServData] = useState([]);
   const [serviceType, setServiceType] = useState("pg");
+  const {data, loading}= useFirebaseDb (serviceType) 
 
-  useEffect(() => {
-    const dataRef = ref(database, serviceType);
-    const unsubscribe = onValue(dataRef, (snapshot) => {
-      // console.log("TIFFINS_VAL", snapshot.val());
-      const data = snapshot.val();
-      setServData(data.slice(0, 4));
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, [serviceType]);
+  console.log(data, loading);
 
   useEffect(() => {
     const el1 = ref1.current;
@@ -97,9 +88,12 @@ export const Home = () => {
           </p>
         </div>
 
+        {/* <SwiperComponent/> */}
+
+
         <div ref={cardsRef} className="servicesCards">
           <div ref={singleCardRef} className="card" id="card1">
-            <img src={pgCard} alt="Image1" />
+            <img src={pgCard2} alt="Image1" />
             <h2>PG/Rooms</h2>
           </div>
 
@@ -160,13 +154,13 @@ export const Home = () => {
           {loading ? (
             <Loader />
           ) : (
-            servData?.map((data, dataKey) => {
+            data?.reverse().slice(0,4).map((data, dataKey) => {
               return <ServiceLayout key={dataKey} data={data} />;
             })
           )}
         </div>
 
-        <div className="aboutUS">
+        <div className="aboutUs">
           <div className="aboutDesc">
             <h1>Who are we?</h1>
             <h2>
@@ -175,6 +169,7 @@ export const Home = () => {
               services like food and libraries.
             </h2>
           </div>
+          <img className="aboutImg" src={commImg} alt="community" />
         </div>
       </div>
     </div>

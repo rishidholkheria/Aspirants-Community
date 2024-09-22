@@ -5,23 +5,10 @@ import { database, ref, onValue } from "../../firebaseConfig";
 import ServiceLayout from "../../components/ServiceLayout/ServiceLayout";
 import { PageHeader } from "../../components/PageHeader/PageHeader";
 import Loader from "../../components/Loader/Loader";
+import useFirebaseDb from "../../CustomHooks/useFirebaseDb";
 
 const Service = (props) => {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const dataRef = ref(database, props.serviceType); //(database, tableName)
-    // console.log(props.serviceType);
-    const unsubscribe = onValue(dataRef, (snapshot) => {
-      const data = snapshot.val();
-      // console.log(data);
-      setPosts(data);
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, [props.serviceType]);
+  const { data, loading } = useFirebaseDb(props.serviceType);
 
   return (
     <div className="services">
@@ -33,7 +20,7 @@ const Service = (props) => {
             <Loader />
           </div>
         ) : (
-          posts.map((service, index) => {
+          data.map((service, index) => {
             return <ServiceLayout key={index} data={service} />;
           })
         )}

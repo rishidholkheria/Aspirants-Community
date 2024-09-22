@@ -4,6 +4,7 @@ import React from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
     gsap.fromTo(
       el1,
       { backgroundColor: "" },
-      { backgroundColor: "#00000028", height: "90px", duration: 0.8 }
+      { backgroundColor: "#00000028", height: "70px", duration: 0.8 }
     );
 
     gsap.to(el1, {
@@ -47,8 +48,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav>
-      <img className="logoIcon" src={logo} alt="LOGO"/>
+    <nav ref={ref1}>
+      <img className="logoIcon" src={logo} alt="LOGO" />
 
       <input type="checkbox" id="sidebar-active" />
       <label for="sidebar-active" class="open-sidebar-button">
@@ -74,24 +75,21 @@ const Navbar = () => {
             <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
           </svg>
         </label>
-        <a class="menu_item" href="/">
+        <Link class="menu_item" to="/">
           Home
-        </a>
+        </Link>
 
         <div className="pgContainer">
           <a class="menu_item">PGs/Apartments</a>
           <ul className="pgLocList">
             <li>
-              <a href="/pg-in-old-rajinder-nagar">Old Rajinder Nagar</a>
+              <Link to="/pg-in-old-rajinder-nagar">Old Rajinder Nagar</Link>
             </li>
             <li>
-              <a href="/pg-in-karol-bagh">Karol Bagh</a>
+              <Link to="/pg-in-karol-bagh">Karol Bagh</Link>
             </li>
             <li>
-              <a href="/pg-in-patel-nagar">Patel Nagar</a>
-            </li>
-            <li>
-              <a href="#">Mukherji Nagar</a>
+              <Link to="/pg-in-patel-nagar">Patel Nagar</Link>
             </li>
           </ul>
         </div>
@@ -99,18 +97,27 @@ const Navbar = () => {
           <a class="menu_item">Services</a>
           <ul className="pgLocList">
             <li>
-              <a href="/tiffin-services">Tiffin/Mess</a>
+              <Link to="/tiffin-services">Tiffin/Mess</Link>
             </li>
             <li>
-              <a href="/upsc-study-material">Free Study Material</a>
+              <Link to="/library">Libraries nearby</Link>
             </li>
             <li>
-              <a href="/library">Libraries nearby</a>
+              <Link to="/upsc-study-material">Free Study Material</Link>
+            </li>
+            <li>
+              <Link to="/coaching-centres">Nearby Coachings</Link>
             </li>
           </ul>
         </div>
-        <a class="menu_item" href="">Contact Us</a>
+        <a class="menu_item" to="">
+          Contact Us
+        </a>
       </div>
+
+      {/* <h3>
+        <a to="/current-affairs">Current Affairs</a>
+      </h3> */}
     </nav>
   );
 };

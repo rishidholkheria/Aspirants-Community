@@ -1,5 +1,4 @@
 import "./App.css";
-import HomePage from "./pages/HomePage/HomePage";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Service from "./pages/ServicesPage/Service";
@@ -14,14 +13,13 @@ function App() {
         <Navbar />
         <div className="appWrap">
           <Routes>
-            <Route path="/homepage" element={<HomePage />} />
             <Route
               path="/pg-in-old-rajinder-nagar"
               element={<Pg type="rj" />}
             />
             <Route path="/pg-in-karol-bagh" element={<Pg type="kb" />} />
             <Route path="/pg-in-patel-nagar" element={<Pg type="pn" />} />
-            <Route path="/" element={<Home/>} />
+            <Route path="/" element={<Home />} />
             <Route
               path="/coaching-centres"
               element={
@@ -66,6 +64,7 @@ function App() {
                 />
               }
             />
+            {/* <Route path="/current-affairs" element={<CurrentAffairs />} /> */}
           </Routes>
         </div>
         <Footer />

@@ -129,6 +129,7 @@ nav h4:hover {
   background-size: contain;
   background-position: center;
   z-index: 10;
+  cursor: pointer;
   /* opacity: 0; */
 }
 
@@ -230,11 +231,13 @@ nav h4:hover {
   align-items: center;
   padding: 40px;
   gap: 40px;
+  flex-wrap: wrap;
   /* border: 2px solid red; */
 }
 
 .typeBtn{
   width: 10%;
+  min-width: 100px;
   height: 40px;
   cursor: pointer;
   color: black;
@@ -258,6 +261,8 @@ nav h4:hover {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .aboutDesc {
@@ -276,6 +281,10 @@ nav h4:hover {
   font-family: "Lexend Deca", Times, serif;
   font-size: 28px;
   line-height: 50px;
+}
+
+.aboutImg{
+  width: 30%; 
 }
 
 @media screen and (max-width: 1400px) {

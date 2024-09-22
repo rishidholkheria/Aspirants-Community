@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import Logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -43,7 +44,9 @@ const Footer = () => {
 
       <div className="cwdev">
         <p className="copyrights">© Copyrights - oldrajindernagar.com </p>
-        <p className="aboutDev"> - Admin</p>
+        <a className="adminBtn" href="https://orn-admin-12.web.app/" target="_blank">
+          <p className="adminText"> - Admin Portal</p>
+        </a>
       </div>
     </div>
   );

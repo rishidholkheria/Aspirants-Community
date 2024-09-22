@@ -1,0 +1,18 @@
+.benefitsLoc{
+    padding-top: 90px;
+}
+
+.pgContentSubhead{
+    color: rgba(255, 255, 255, 0.721);
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+.pageContent{
+    color: rgba(255, 255, 255, 0.519);
+
+}
+
+.contentImage{
+    max-height: 400px;
+    margin: 10px;
+}
